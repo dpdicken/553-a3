@@ -1,0 +1,54 @@
+==23678== Cachegrind, a cache and branch-prediction profiler
+==23678== Copyright (C) 2002-2015, and GNU GPL'd, by Nicholas Nethercote et al.
+==23678== Using Valgrind-3.11.0 and LibVEX; rerun with -h for copyright info
+==23678== Command: ./lulesh2.0
+==23678== 
+--23678-- warning: L3 cache found, using its data for the LL simulation.
+Running problem size 30^3 per domain until completion
+Num processors: 1
+Total number of elements: 27000
+
+To run other sizes, use -s <integer>.
+To run a fixed number of iterations, use -i <integer>.
+To run a more or less balanced region set, use -b <integer>.
+To change the relative costs of regions, use -c <integer>.
+To print out progress, use -p
+To write an output file for VisIt, use -v
+See help (-h) for more options
+
+==23678== brk segment overflow in thread #1: can't grow to 0x4b08000
+==23678== brk segment overflow in thread #1: can't grow to 0x4b28000
+==23678== brk segment overflow in thread #1: can't grow to 0x4b28000
+==23678== brk segment overflow in thread #1: can't grow to 0x4b28000
+==23678== brk segment overflow in thread #1: can't grow to 0x4b28000
+Run completed:  
+   Problem size        =  30 
+   MPI tasks           =  1 
+   Iteration count     =  932 
+   Final Origin Energy = 2.025075e+05 
+   Testing Plane 0 of Energy Array on rank 0:
+        MaxAbsDiff   = 7.639755e-11
+        TotalAbsDiff = 8.590535e-10
+        MaxRelDiff   = 1.482369e-12
+
+
+Elapsed time         =    1277.04 (s)
+Grind time (us/z/c)  =  50.748844 (per dom)  ( 50.748844 overall)
+FOM                  =  19.704882 (z/s)
+
+==23678== 
+==23678== I   refs:      188,848,279,303
+==23678== I1  misses:            564,256
+==23678== LLi misses:            564,201
+==23678== I1  miss rate:            0.00%
+==23678== LLi miss rate:            0.00%
+==23678== 
+==23678== D   refs:       82,546,363,571  (57,802,007,504 rd   + 24,744,356,067 wr)
+==23678== D1  misses:      3,017,386,248  ( 2,235,182,443 rd   +    782,203,805 wr)
+==23678== LLd misses:        640,725,063  (   380,468,660 rd   +    260,256,403 wr)
+==23678== D1  miss rate:             3.7% (           3.9%     +            3.2%  )
+==23678== LLd miss rate:             0.8% (           0.7%     +            1.1%  )
+==23678== 
+==23678== LL refs:         3,017,950,504  ( 2,235,746,699 rd   +    782,203,805 wr)
+==23678== LL misses:         641,289,264  (   381,032,861 rd   +    260,256,403 wr)
+==23678== LL miss rate:              0.2% (           0.2%     +            1.1%  )
