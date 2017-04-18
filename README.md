@@ -47,5 +47,5 @@ gcc -g fast.c -o fast
   
   
   6. We are presented with this interface.
-  [Slow program information](slow.png)
+  (slow.png)
 
