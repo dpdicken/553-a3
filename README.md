@@ -11,18 +11,23 @@ You will find two example files, slow.c and fast.c. We will be running our examp
 
 
 1. First, make sure you have valgrind installed. You can check if you have valgrind installed by running the command 
-
 ```
 valgrind --version
 ```
-
-If it is uninstalled, you can install it via sudo apt-get install valgrind or by following instructions found [here](http://valgrind.org/downloads/current.html#current).
+ If it is uninstalled, you can install it via sudo apt-get install valgrind or by following instructions found [here](http://valgrind.org/downloads/current.html#current).
 
 
 2. Next, you must install kcachegrind. You can check if you have kcachegrind installed by running the command 
-
 ```
 kcachegrind --version
 ```
+ If it is uninstalled, you can install it via sudo apt-get install kcachegrindgrind or by following instructions found [here](https://kcachegrind.github.io/html/Download.html).
 
-If it is uninstalled, you can install it via sudo apt-get install kcachegrindgrind or by following instructions found [here](https://kcachegrind.github.io/html/Download.html).
+
+3. Now we compile our code. We run the following commands (Note the -g option for additional debug information)
+```
+gcc -g slow.c -o slow
+gcc -g fast.c -o fast
+```
+ We now have produced two executables.
+
