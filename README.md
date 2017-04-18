@@ -28,6 +28,15 @@ kcachegrind --version
 ```
 gcc -g slow.c -o slow
 gcc -g fast.c -o fast
-```
+``` 
  We now have produced two executables.
+ 
+ 
+ 4. Now we must generate the call graph information about our program. To do this, we run it through the callgrind tool provided by valgrind. Our program requires input, so I have provided an example input file titled input.
+ ```
+ valgrind --tool=callgrind ./slow < input
+ valgrind --tool=callgrind ./fast < input
+ ```
+  We have now generated our callgraph information, which will be found in a file called callgrind.out.[num]
+ 
 
