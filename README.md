@@ -47,5 +47,5 @@ gcc -g fast.c -o fast
   
   
   6. We are presented with this interface.
-  (slow.png)
+  ![](slow.png)
 
