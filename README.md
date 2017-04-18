@@ -48,5 +48,5 @@ gcc -g fast.c -o fast
   
   6. We are presented with this interface.
   ![](slow.png)
-   We are immediatly presented with useful information. For each function called in our program, there is information presented. The incl. column contains a count of how many instructions that function has executed, including functions called from it. The self column is how many instructions just that function has called. The called column indicates how many times that function has been called. Finally, the location column tells us what source file this function is in.
+   We are immediatly presented with useful information. For each function called in our program, there is information presented. The incl. column contains a count of how many instructions that function has executed, including instructions executed in functions called from it. The self column is how many instructions just that function has called. We can change what these columns contain by clicking the relative button highlighted. This makes it display the total percent of time the program spends in that function relative to others. The called column indicates how many times that function has been called. Finally, the location column tells us what source file this function is in.
 
