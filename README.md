@@ -10,13 +10,15 @@ As stated earlier, kcachegrind visualizes profiling information. The profiling i
 You will find two example files, slow.c and fast.c. We will be running our example on these files. Lets get started.
 
 
-1. First, make sure you have valgrind installed. You can check if you have valgrind installed by running the command '''
+1. First, make sure you have valgrind installed. You can check if you have valgrind installed by running the command 
+'''
 valgrind --version
 '''
 If it is uninstalled, you can install it via sudo apt-get install valgrind or by following instructions found [here](http://valgrind.org/downloads/current.html#current).
 
 
-2. Next, you must install kcachegrind. You can check if you have kcachegrind installed by running the command '''
+2. Next, you must install kcachegrind. You can check if you have kcachegrind installed by running the command 
+'''
 kcachegrind --version
 '''
 If it is uninstalled, you can install it via sudo apt-get install kcachegrindgrind or by following instructions found [here](https://kcachegrind.github.io/html/Download.html).
