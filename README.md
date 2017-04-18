@@ -39,4 +39,5 @@ gcc -g fast.c -o fast
  ```
   We have now generated our callgraph information, which will be found in a file called callgrind.out.[num]
  
+ 5. We can now run our information through kcachegrind. For this tutorial, since the user will be working on rose, I will explain how to get a report generated on the 
 
