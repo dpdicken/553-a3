@@ -1,7 +1,9 @@
 <h1> CS553 Assignment 3: Compiler Tool Demonstration </h1>
 
 <h2> An Introduction to kcachegrind </h2>
-In this tutorial you will learn about the profiling visualization tool kcachgrind. This is a profiling tool that can help the user detect bottlenecks in their code. It does this through a GUI that displays myriads of information to the user. It shows things like which functions are running the most, how many instructions are being executed in functions, and a callgraph visualizations. These will hopefully lead the user to conclusions on how to optimize their code. You can find the website for the tool [here](https://kcachegrind.github.io/html/Home.html).
+In this tutorial you will learn about the profiling visualization tool kcachgrind. This is a profiling tool that can help the user detect bottlenecks in their code. It does this through a GUI that displays myriads of information to the user. It shows things like which functions are running the most, how many instructions are being executed in functions, and a callgraph visualizations. These will hopefully lead the user to conclusions on how to optimize their code. You can find the website for the tool 
+
+[here](https://kcachegrind.github.io/html/Home.html).
 
 
 When you develop a program, usually, one of the last steps is to make it as fast as possible (but still correct). You don't want to waste your time optimizing functions rarely used. So you need to know in what parts of your program most of the time is spent. This is done with a technique called Profiling. The program is run under control of a profiling tool, which gives you the time distribution among executed functions in the run. After examination of the program's profile, you hopefully know where to optimize. This tool, kcachegrind, looks to ease the process of finding where to optimize your programs.
