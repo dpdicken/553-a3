@@ -62,3 +62,4 @@ kcachegrind is a usefull tool that allows you to see important information about
 4. Most caches and branch predictors are physically indexed, but Cachegrind simulates caches using virtual addresses. It doesn't account for virtual-to-physical address mappings. Hence the simulation is not a true representation of what's happening in the cache. 
 
 <h2> Connections </h2>
+This 
