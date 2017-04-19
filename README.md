@@ -83,4 +83,4 @@ kcachegrind is a usefull tool that allows you to see important information about
 5. Most caches and branch predictors are physically indexed, but Cachegrind simulates caches using virtual addresses. It doesn't account for virtual-to-physical address mappings. Hence the simulation is not a true representation of what's happening in the cache. 
 
 <h2> Connections </h2>
-This 
+The tools discussed in this write up are dynamic analysis tools. Throughout this semester, we have mostly been talking about static analysis tools. Dynamic tools are interesting to think about because you have to somehow maintain the state of the program throughout its execution so that you can perform your analysis on it. Valgrind does this by creating a synthetic processor. Rather than running instructions through the processor, it runs them through its own synthetic processor, evaluating instructions through whatever tool is being run before actually running the instruction. This is an interesting idea to look into.
