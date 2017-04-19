@@ -56,6 +56,7 @@ gcc -g fast.c -o fast
 
 <h2> Limitations </h2>
 kcachegrind is a usefull tool that allows you to see important information about your program that can help review possible optimizations. However there are some limitations to this tool, most of which arise from valgrinds cache profiling. 
+
 1. This is fairly obvious, but this tool only reports relevent information to creating optimizations. It does not offer solutions on how to actually improve your code.
 
 2. If the code is not distributed throughout many functions, it can be hard to get useful information.
