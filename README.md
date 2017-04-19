@@ -54,3 +54,11 @@ gcc -g fast.c -o fast
   ![](fast_insert.png)
   We see that this new insert function is much better. It now only takes up around 19% of the run time, where we spend much more time now in read (76%), doing IO.
 
+
+kcachegrind is a usefull tool that allows you to see important information about your program that can help review possible optimizations. However there are some limitations to this tool, most of which arise from valgrinds cache profiling. 
+1. This is fairly obvious, but this tool only reports relevent information to creating optimizations. It does not offer solutions on how to actually improve your code.
+2. cachgrind doesn't account for kernel activity -- the effect of system calls on the cache and branch predictor contents is ignored.
+3. It doesn't account for other process activity. This is probably desirable when considering a single program.
+4. Most caches and branch predictors are physically indexed, but Cachegrind simulates caches using virtual addresses. It doesn't account for virtual-to-physical address mappings. Hence the simulation is not a true representation of what's happening in the cache. 
+
+<h2> Connections </h2>
