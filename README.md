@@ -53,6 +53,8 @@ gcc -g fast.c -o fast
    7. Now that we have all this information, we look at where we can speed up our program. We notice that over 99% of the program time is spent in the insert function, so perhaps that could use some optimization. The fast.c source code offers a version of the same program with an enhanced insert function. So, we run the trace we have for the fast executable through kcachegrind.
   ![](fast_insert.png)
   We see that this new insert function is much better. It now only takes up around 19% of the run time, where we spend much more time now in read (76%), doing IO.
+  
+  So, we have used kcachegrind to view information about our program. We were able to use this information to make our program perform better.
 
 <h2> Limitations </h2>
 kcachegrind is a usefull tool that allows you to see important information about your program that can help review possible optimizations. However there are some limitations to this tool, most of which arise from valgrinds cache profiling. 
