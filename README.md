@@ -51,7 +51,7 @@ gcc -g fast.c -o fast
   
   6. We are presented with this interface.
   ![](slow.png)
-   We are immediatly presented with useful information. For each function called in our program, there is information presented. The incl. column contains a count of how many instructions that function has executed, including instructions executed in functions called from it. The self column is how many instructions just that function has called. We can change what these columns contain by clicking the "relative" button highlighted in green. Clicking this makes it display the total percent of time the program spends in that function relative to others. The called column indicates how many times that function has been called. Finally, the location column tells us what source file this function is in. In the bottom right of the screen, highlighted in blue, is the call graph for the function. We are able to view the call graph for any function we look at. Another interesting point to take not of is our ability to look at the source code for our function, which we can do by clicking the tab highlighted in orange.
+   We are immediately presented with useful information. For each function called in our program, there is information presented. The incl. column contains a count of how many instructions that function has executed, including instructions executed in functions called from it. The self column is how many instructions just that function has called. We can change what these columns contain by clicking the "relative" button highlighted in green. Clicking this makes it display the total percent of time the program spends in that function relative to others. The called column indicates how many times that function has been called. Finally, the location column tells us what source file this function is in. In the bottom right of the screen, highlighted in blue, is the call graph for the function. We are able to view the call graph for any function we look at. Another interesting point to take not of is our ability to look at the source code for our function, which we can do by clicking the tab highlighted in orange.
    
    7. Now that we have all this information, we look at where we can speed up our program. We notice that over 99% of the program time is spent in the insert function, so perhaps that could use some optimization. The fast.c source code offers a version of the same program with an enhanced insert function. So, we run the trace we have for the fast executable through kcachegrind.
   ![](fast_insert.png)
@@ -67,9 +67,9 @@ Looking at the information presented, we see almost all the time (78%) is spent 
 
 
 <h2> Limitations </h2>
-kcachegrind is a usefull tool that allows you to see important information about your program that can help review possible optimizations. However there are some limitations to this tool, most of which arise from valgrinds cache profiling. 
+kcachegrind is a useful tool that allows you to see important information about your program that can help review possible optimizations. However there are some limitations to this tool, most of which arise from valgrinds cache profiling. 
 
-1. This is fairly obvious, but this tool only reports relevent information to creating optimizations. It does not offer solutions on how to actually improve your code.
+1. This is fairly obvious, but this tool only reports relevant information to creating optimizations. It does not offer solutions on how to actually improve your code.
 
 2. If the code is not distributed throughout many functions, it can be hard to get useful information.
 
