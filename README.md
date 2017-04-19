@@ -54,7 +54,7 @@ gcc -g fast.c -o fast
   ![](fast_insert.png)
   We see that this new insert function is much better. It now only takes up around 19% of the run time, where we spend much more time now in read (76%), doing IO.
 
-
+<h2> Limitations </h2>
 kcachegrind is a usefull tool that allows you to see important information about your program that can help review possible optimizations. However there are some limitations to this tool, most of which arise from valgrinds cache profiling. 
 1. This is fairly obvious, but this tool only reports relevent information to creating optimizations. It does not offer solutions on how to actually improve your code.
 2. cachgrind doesn't account for kernel activity -- the effect of system calls on the cache and branch predictor contents is ignored.
