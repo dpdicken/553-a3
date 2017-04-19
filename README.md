@@ -61,6 +61,7 @@ gcc -g fast.c -o fast
 
 <h2> Running on Lulesh </h2>
 Running callgrind on lulesh took roughly 28 minutes. The produced trace does not actually tell us that much about the program. It is shown below.
+
 ![](lulesh.png)
 
 Looking at the information presented, we see almost all the time (78%) is spent in the LagrangeLeapFrog function. There are only ever two other functions called from here, CalcElemVolume and CalcElemShapeFunctionDerivatives. This function contains over 1500 lines of code, so knowing so this much time is spent in the function does not help us figure where the bottleneck is.
